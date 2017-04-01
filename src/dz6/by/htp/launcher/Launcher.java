@@ -3,8 +3,8 @@ import dz6.by.htp.entity.*;
 public class Launcher {
 
 	public static void main(String[] args) {
-	public RentStation sta1 = new RentStation();
-	
+	RentStation st1 = new RentStation();
+	st1.start();
 
 	}
 
