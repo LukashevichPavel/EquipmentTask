@@ -7,6 +7,11 @@ private double rentPrice;
 private double lostPrice;
 private boolean isAvialible;
 
+public Acsessories(){
+	
+}
+
+
 public Acsessories (Category cat, String name, double rentPrice, double lostPrice, boolean avi){
 	this.cat=cat;
 	this.name=name;
@@ -14,6 +19,13 @@ public Acsessories (Category cat, String name, double rentPrice, double lostPric
 	this.lostPrice=lostPrice;
 	this.isAvialible=avi;
 }
+
+public boolean getAcsessoriesForCat(Category cat){
+boolean acsTrue=false;
+if (this.cat==cat) acsTrue=true; 
+return acsTrue;
+}
+
 
 public void print(){
 	System.out.println(this.toString());
