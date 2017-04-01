@@ -1,7 +1,7 @@
 package dz6.by.htp.entity;
 
 public class Acsessories {
-private Category cat;
+private String cat;
 private String name;
 private double rentPrice;
 private double lostPrice;
@@ -12,7 +12,7 @@ public Acsessories(){
 }
 
 
-public Acsessories (Category cat, String name, double rentPrice, double lostPrice, boolean avi){
+public Acsessories (String cat, String name, double rentPrice, double lostPrice, boolean avi){
 	this.cat=cat;
 	this.name=name;
 	this.rentPrice=rentPrice;
@@ -20,7 +20,7 @@ public Acsessories (Category cat, String name, double rentPrice, double lostPric
 	this.isAvialible=avi;
 }
 
-public boolean getAcsessoriesForCat(Category cat){
+public boolean getAcsessoriesForCat(String cat){
 boolean acsTrue=false;
 if (this.cat==cat) acsTrue=true; 
 return acsTrue;
@@ -33,11 +33,11 @@ public void print(){
 
 
 
-public Category getCat() {
+public String getCat() {
 	return cat;
 }
 
-public void setCat(Category cat) {
+public void setCat(String cat) {
 	this.cat = cat;
 }
 
