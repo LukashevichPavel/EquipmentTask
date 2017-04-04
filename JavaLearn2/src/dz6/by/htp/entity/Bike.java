@@ -9,8 +9,8 @@ public Bike(){
 	
 }
 	
-	public Bike(int id, String cat,String title,Acsessories[]acs,boolean isAvl,double rentPrice, double lostPrice){
-	super.setId(id);
+	public Bike(String cat,String title,Acsessories[]acs,boolean isAvl,double rentPrice, double lostPrice){
+	
 	super.setCategory(cat);
 	super.setTitle(title);
 	super.setAcsessories(acs);
@@ -27,8 +27,7 @@ public Bike(){
 				}
 		double tempRentPrice = new BigDecimal(15+Math.random()*25).setScale(2, RoundingMode.UP).doubleValue();
 		double tempLostPrice=new BigDecimal(50+Math.random()*100).setScale(2, RoundingMode.UP).doubleValue();
-		Bike tempEquipment = new Bike(super.ind,"Bike",tempName,tempAcs,true,tempRentPrice , tempLostPrice);
-		super.ind++;
+		Bike tempEquipment = new Bike("Bike",tempName,tempAcs,true,tempRentPrice , tempLostPrice);
 		return tempEquipment;
 	}
 	

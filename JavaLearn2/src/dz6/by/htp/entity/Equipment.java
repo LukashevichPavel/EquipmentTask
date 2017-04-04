@@ -1,7 +1,7 @@
 package dz6.by.htp.entity;
 
 public abstract class Equipment {
-	private int id;
+	
 	private String category;
 	private String title;
 	private Acsessories acsessories[];
@@ -17,8 +17,8 @@ public abstract class Equipment {
 
 public Equipment(){};
 
-public Equipment(int id, String cat,String title,Acsessories[]acsessories,boolean isAvlble, double rentPrice, double lostPrice){
-	this.id = id;
+public Equipment(String cat,String title,Acsessories[]acsessories,boolean isAvlble, double rentPrice, double lostPrice){
+	
 	this.category = cat;
 	this.title = title;
 	this.acsessories = acsessories;
@@ -27,18 +27,15 @@ public Equipment(int id, String cat,String title,Acsessories[]acsessories,boolea
 	this.lostPrice = lostPrice;
 }
 
-public void print(){
+public void print(){//Vivodit 1 ed. equipment
 	System.out.println(this.toString());	
 }
 
-public void takeToRent(int id){
-	
-} 
 
 
 
-public int getId() {return id;}
-public void setId(int id) {this.id = id;}
+
+
 public double getRentPrice() {return rentPrice;}
 public void setRentPrice(double rentPrice) {this.rentPrice = rentPrice;}
 public double getLostPrice() {return lostPrice;}
@@ -63,7 +60,7 @@ public void setLenght(int lenght) {this.lenght = lenght;}
 @Override
 public String toString() {
 	String finalS;
-	finalS ="[Equipment][id:"+ind+"] [category=" + category + ", title=" + title;
+	finalS ="[Equipment][category=" + category + ", title=" + title;
 	if (category.equals("Skis")){
 		finalS=finalS+" length "+lenght+", isAvialible=" + isAvialible + ", rentPrice=" + rentPrice
 				+ ", lostPrice=" + lostPrice + "]";}

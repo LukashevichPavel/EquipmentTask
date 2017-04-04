@@ -11,8 +11,7 @@ public class SnowBoard extends Equipment{
 
 	}
 	
-	public SnowBoard(int id, String cat,String title,int length){
-		super.setId(id);
+	public SnowBoard(String cat,String title,int length){
 		super.setCategory(cat);
 		super.setTitle(title);
 		super.setLenght(length);
@@ -27,7 +26,7 @@ public class SnowBoard extends Equipment{
 		double tempRentPrice = new BigDecimal(15+Math.random()*25).setScale(2, RoundingMode.UP).doubleValue();
 		double tempLostPrice=new BigDecimal(50+Math.random()*100).setScale(2, RoundingMode.UP).doubleValue();
 		int tempLength=40+(int)Math.random()*75;
-		SnowBoard tempEquipment = new SnowBoard(ind,"SnowBoard",tempName,tempLength);
+		SnowBoard tempEquipment = new SnowBoard("SnowBoard",tempName,tempLength);
 		super.ind++;
 		return tempEquipment;
 	}

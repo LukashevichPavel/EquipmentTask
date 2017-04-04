@@ -1,7 +1,7 @@
 package dz6.by.htp.entity;
 
 public class RentUnit {
-private Equipment[] inRent;;
+private Equipment[] inRent;
 
 
 public RentUnit(){

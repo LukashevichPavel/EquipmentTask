@@ -3,8 +3,9 @@ package dz6.by.htp.entity;
 import java.util.*;
 
 public class RentStation {
-	private Equipment[] base;
-
+	private Equipment[] base; //
+	private Client[]baseClienet;  
+	private RentUnit baseInRent;
 
 public void start(){
 	this.base = new Equipment[15]; //Init base 
@@ -21,26 +22,21 @@ public void start(){
 		else{base[i]=tempSkis.random();base[i].print();}
 	
 	}
+	
+	
+	
 	}
 }
-	
-			
-			
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+public void takeToRent(){}  //metod kot. pomechaet equipment kak vzyatiy v arendu
+public void removeFromRent(){} //metod kot. ydalyaet equipment iz bazi arendovanogo equiipment	
+public void printInRent(){} //metod kot. vivodyt all equipment kotoriy naxoditsa v arende  
+public void addClient(){}//metod kot. dobavlyaet novogo clienta
+public boolean checkClient(){//metod kot. opredelyaet est li Client v baze clientov
+	boolean check=true;
+	return check;
 }
+			
+	
+}//final
 

@@ -11,8 +11,7 @@ public Skis(){
 	
 	}
 	
-public Skis(int id, String cat,String title,int length, Acsessories[]acs,boolean isAvl,double rentPrice, double lostPrice){
-	super.setId(id);
+public Skis(String cat,String title,int length, Acsessories[]acs,boolean isAvl,double rentPrice, double lostPrice){
 	super.setCategory(cat);
 	super.setTitle(title);
 	super.setLenght(length);
@@ -31,8 +30,8 @@ public Skis(int id, String cat,String title,int length, Acsessories[]acs,boolean
 		double tempRentPrice = new BigDecimal(15+Math.random()*25).setScale(2, RoundingMode.UP).doubleValue();
 		double tempLostPrice=new BigDecimal(50+Math.random()*100).setScale(2, RoundingMode.UP).doubleValue();
 		int tempLength=40+(int)Math.random()*125;
-		Skis tempEquipment = new Skis(ind, "Skis",tempName,tempLength,tempAcs,true,tempRentPrice , tempLostPrice);
-		ind++;
+		Skis tempEquipment = new Skis("Skis",tempName,tempLength,tempAcs,true,tempRentPrice , tempLostPrice);
+		
 		return tempEquipment;
 	}
 	
