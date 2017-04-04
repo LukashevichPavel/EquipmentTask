@@ -4,17 +4,36 @@ import java.util.*;
 
 public class RentStation {
 	private Equipment[] base; //
-	private Client[]baseClienet;  
+	private ClientBase baseClient;  
 	private RentUnit baseInRent;
 
 public void start(){
-	this.base = new Equipment[15]; //Init base 
-	String firstname = "Lukashevich";
-	String lastname = "Pavel";
-	String passport = "MP123123";
-	String adress = "Burdeynogo 19-315";
-	String telNumber = "3109877";
-	Client cl = new Client(firstname, lastname, passport, adress, telNumber);
+	base = new Equipment[15]; //Init base Equipment
+	String firstname,lastname, passport, adress, telNumber;
+	firstname = "Ivanov";
+	lastname = "Ivan";
+	passport = "MP123123";
+	adress = "Burdeynogo 1-15";
+	telNumber = "3109876";
+	Client cl1 = new Client(firstname, lastname, passport, adress, telNumber);
+	baseClient.addClient(cl1);
+	
+	firstname = "Petrov";
+	lastname = "Petr";
+	passport = "MP123123";
+	adress = "Burdeynogo 7-25";
+	telNumber = "5109876";
+	Client cl2 = new Client(firstname, lastname, passport, adress, telNumber);
+	baseClient.addClient(cl2);
+	
+	firstname = "Cidorov";
+	lastname = "Cidor";
+	passport = "MP456789";
+	adress = "Burdeynogo 10-50";
+	telNumber = "8109877";
+	Client cl3 = new Client(firstname, lastname, passport, adress, telNumber);
+	baseClient.addClient(cl3);
+	
 	Bike tempBike = new Bike();
 	Skis tempSkis = new Skis();
 	SnowBoard tempSnow = new SnowBoard();
@@ -36,12 +55,17 @@ public void start(){
 public void takeToRent(){}  //metod kot. pomechaet equipment kak vzyatiy v arendu
 public void removeFromRent(){} //metod kot. ydalyaet equipment iz bazi arendovanogo equiipment	
 public void printInRent(){} //metod kot. vivodyt all equipment kotoriy naxoditsa v arende  
-public void addClient(){}//metod kot. dobavlyaet novogo clienta
+
 public boolean checkClient(){//metod kot. opredelyaet est li Client v baze clientov
 	boolean check=true;
 	return check;
 }
-			
+public int checkClienForRent(){//metod kot. proveryaet kolvo vzyatogo Equipment-a 
+	int countRentEquipment=0;
+	return countRentEquipment;
+}
+
+		
 	
 }//final
 

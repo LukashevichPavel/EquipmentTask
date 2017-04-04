@@ -33,10 +33,11 @@ public void print(){//Vivodit 1 ed. equipment
 
 public Equipment getRandom(){
 	int random=(int)Math.random()*3;
+	Equipment temp1 = new Bike();
 	if (random==1){Equipment temp = new Bike();}
 	if (random==2){Equipment temp = new Skis();}
 	if (random==3){Equipment temp = new SnowBoard();}
-	return temp;
+	return temp1;
 }
 
 

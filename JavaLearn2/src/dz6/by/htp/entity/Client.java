@@ -5,12 +5,12 @@ private String firstname;
 private String lastname;
 private String passport;
 private String adress;
-private int telNumber;
+private String telNumber;
 
 public Client(){
 	
 }
-public Client(String firstname, String lastname, String passport, String adress, int telNumber){
+public Client(String firstname, String lastname, String passport, String adress, String telNumber){
 	this.firstname=firstname;
 	this.lastname=lastname;
 	this.passport=passport;
@@ -44,10 +44,10 @@ public String getAdress() {
 public void setAdress(String adress) {
 	this.adress = adress;
 }
-public int getTelNumber() {
+public String getTelNumber() {
 	return telNumber;
 }
-public void setTelNumber(int telNumber) {
+public void setTelNumber(String telNumber) {
 	this.telNumber = telNumber;
 }
 
