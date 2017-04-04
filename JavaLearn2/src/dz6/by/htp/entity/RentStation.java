@@ -9,12 +9,17 @@ public class RentStation {
 
 public void start(){
 	this.base = new Equipment[15]; //Init base 
-	
+	String firstname = "Lukashevich";
+	String lastname = "Pavel";
+	String passport = "MP123123";
+	String adress = "Burdeynogo 19-315";
+	String telNumber = "3109877";
+	Client cl = new Client(firstname, lastname, passport, adress, telNumber);
 	Bike tempBike = new Bike();
 	Skis tempSkis = new Skis();
 	SnowBoard tempSnow = new SnowBoard();
 	tempBike=tempBike.random();
-	int random1=(int)(3+Math.random()*10); //Create random count equipment and add them to base inReady
+	int random1=(int)(3+Math.random()*10); //Create random count equipment and add them to base 
 	for (int i=0; i<random1;i++){
 	if (i<4){base[i]=tempBike.random();base[i].print();}
 	else {

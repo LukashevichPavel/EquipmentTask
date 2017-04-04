@@ -6,6 +6,20 @@ private String lastname;
 private String passport;
 private String adress;
 private int telNumber;
+
+public Client(){
+	
+}
+public Client(String firstname, String lastname, String passport, String adress, int telNumber){
+	this.firstname=firstname;
+	this.lastname=lastname;
+	this.passport=passport;
+	this.adress=adress;
+	this.telNumber=telNumber;
+}
+
+
+
 public String getFirstname() {
 	return firstname;
 }
