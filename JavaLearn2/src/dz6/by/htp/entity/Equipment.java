@@ -31,7 +31,13 @@ public void print(){//Vivodit 1 ed. equipment
 	System.out.println(this.toString());	
 }
 
-
+public Equipment getRandom(){
+	int random=(int)Math.random()*3;
+	if (random==1){Equipment temp = new Bike();}
+	if (random==2){Equipment temp = new Skis();}
+	if (random==3){Equipment temp = new SnowBoard();}
+	return temp;
+}
 
 
 
